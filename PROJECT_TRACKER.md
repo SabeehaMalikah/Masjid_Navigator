@@ -84,7 +84,7 @@
 
 ## Week 13
 - [ ] Integrate Google Maps JavaScript SDK.
-- Display map centered on user location with markers for mosques nearby matching filter options.
+- [ ] Display map centered on user location with markers for mosques nearby matching filter options.
 - [ ] Connect map markers to mosque cards (clicking markers opens mosque's profile).
 
 ## Week 14
