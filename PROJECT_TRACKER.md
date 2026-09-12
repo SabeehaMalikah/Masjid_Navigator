@@ -1,5 +1,5 @@
 # Project Progress Tracker
-# Week 1
+## Week 1
 - [x] Complete Project Intake Survey
 - [x] Setup GitHub repository
 - [x] Set up Timelog
