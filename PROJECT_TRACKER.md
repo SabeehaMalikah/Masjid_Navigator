@@ -7,22 +7,22 @@
 
 ## Week 2
 ### Coding
-- [ ] Build a Python program that contains 5-10 mosques and their facilities (hardocded JSON). Allow the user to search/filter them.
-- [ ] Build and test a CLI prototype that allows users to interact with the directory of mosques and filter thrrough them as many times as desired. 
+- [x] Build a Python program that contains 5-10 mosques and their facilities (hardocded JSON). Allow the user to search/filter them.
+- [x] Build and test a CLI prototype that allows users to interact with the directory of mosques and filter thrrough them as many times as desired. 
 ### Research/Learning
-- [ ] Learn how to plan building your first app.
-- [ ] Understand what technologies I will have to familiarize myself with during different phases of the project.
+- [x] Learn how to plan building your first app.
+- [x] Understand what technologies I will have to familiarize myself with during different phases of the project.
 ### Documentaation
-- [ ] Create a datailed progress tracker for the remainder of the semester.
-- [ ] Work on slides first draft. 
+- [x] Create a datailed progress tracker for the remainder of the semester.
+- [x] Work on slides first draft. 
 
 ## Week 3
 ### Coding + Design
-- [ ] Draft a database schema diagram for mosques, facilties, and reviews.
-- [ ] Sketch basic UI wireframes showing the homepage, map view, filter panel, and mosque dashboard pages.
+- [x] Draft a database schema diagram for mosques, facilties, and reviews.
+- [x] Sketch basic UI wireframes showing the homepage, map view, filter panel, and mosque dashboard pages.
 - [ ] Install PostgreSQL.
 ### Learning
-- [ ] Learn UI/UX basics and how tobuild a wireframe.
+- [x] Learn UI/UX basics and how to build a wireframe.
 - [ ] Learn relational database fundamentals and SQL.
 
 ## Week 4
