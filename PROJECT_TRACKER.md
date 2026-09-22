@@ -26,15 +26,6 @@
 - [ ] Learn relational database fundamentals and SQL.
 
 ## Week 4
-### Coding
-- [ ] Set up PostgreSQL database.
-- [ ] Write SQL scripts.
-- [ ] Migrate hardcoded JSON dataset into PostgreSQL tables.
-
-### Learning
-- [ ] SQL basics
-
-## Week 5
 - [ ] Setup Google Cloud Console account and generate a Google Places API key.
 - [ ] Write a Python script that uses the requests library to fetch NYC mosque data (name, address, hours, reviews).
 - [ ] Store raw data into PostgreSQL.
@@ -43,6 +34,15 @@
 - [ ] API keys
 - [ ] HTTP requests
 - [ ] JSON parsing
+
+## Week 5
+### Coding
+- [ ] Set up PostgreSQL database.
+- [ ] Write SQL scripts.
+- [ ] Migrate hardcoded JSON dataset into PostgreSQL tables.
+
+### Learning
+- [ ] SQL basics
 
 ## Week 6
 - [ ] Set up `spaCy` or `NLTK` in Python.
