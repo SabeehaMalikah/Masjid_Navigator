@@ -1,48 +1,48 @@
 # Project Progress Tracker
 ## Week 1
 - [x] Complete Project Intake Survey
-- [x] Setup GitHub repository
-- [x] Set up Timelog
+- [x] Set up GitHub repository
+- [x] Set up time log
 - [x] Discuss project details with supervisor 
 
 ## Week 2
 ### Coding
-- [x] Build a Python program that contains 5-10 mosques and their facilities (hardocded JSON). Allow the user to search/filter them.
-- [x] Build and test a CLI prototype that allows users to interact with the directory of mosques and filter thrrough them as many times as desired. 
+- [x] Build a Python program that contains 5-10 mosques and their facilities (hardcoded JSON). Allow the user to search/filter them.
+- [x] Build and test a CLI prototype that allows users to interact with the directory of mosques and filter through them as many times as desired. 
 ### Research/Learning
 - [x] Learn how to plan building your first app.
 - [x] Understand what technologies I will have to familiarize myself with during different phases of the project.
 ### Documentaation
-- [x] Create a datailed progress tracker for the remainder of the semester.
+- [x] Create a detailed progress tracker for the remainder of the semester.
 - [x] Work on slides first draft. 
 
 ## Week 3
 ### Coding + Design
-- [x] Draft a database schema diagram for mosques, facilties, and reviews.
+- [x] Draft a database schema diagram for mosques, facilities, and reviews.
 - [x] Sketch basic UI wireframes showing the homepage, map view, filter panel, and mosque dashboard pages.
-- [ ] Install PostgreSQL.
+- [x] Install PostgreSQL.
 ### Learning
 - [x] Learn UI/UX basics and how to build a wireframe.
-- [ ] Learn relational database fundamentals and SQL.
+- [x] Learn relational database fundamentals and SQL.
 
 ## Week 4
-- [ ] Setup Google Cloud Console account and generate a Google Places API key.
-- [ ] Write a Python script that uses the requests library to fetch NYC mosque data (name, address, hours, reviews).
+- [x] Set up a Google Cloud Console account and generate a Google Places API key.
+- [x] Write a Python script that uses the requests library to fetch NYC mosque data (name, address, hours, reviews).
 - [ ] Store raw data into PostgreSQL.
 
 ### Learning
-- [ ] API keys
-- [ ] HTTP requests
-- [ ] JSON parsing
+- [x] API keys
+- [x] HTTP requests
+- [x] JSON parsing
 
 ## Week 5
 ### Coding
-- [ ] Set up PostgreSQL database.
-- [ ] Write SQL scripts.
+- [x] Set up PostgreSQL database.
+- [x] Write SQL scripts.
 - [ ] Migrate hardcoded JSON dataset into PostgreSQL tables.
 
 ### Learning
-- [ ] SQL basics
+- [x] SQL basics
 
 ## Week 6
 - [ ] Set up `spaCy` or `NLTK` in Python.
