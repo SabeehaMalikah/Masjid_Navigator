@@ -9,3 +9,21 @@ Muslims are required to pray five times a day and are often outside of their hom
 
 **Features**: Each mosque will have a profile with information describing what facilities are available. Users will be able to interact with a map containing markers for nearby masjids. They can click on masjids for more detail or easily view their facilities at a glance.
 
+## Technical Stack
+- **Database: PostgreSQL**
+  - Used to store structured relationships between mosques, facility attributes, and reviews.
+  
+- **Backend API: Python (FastAPI)**
+  - Provides high execution speed and automatically generates interactive Swagger UI documentation for testing REST endpoints[cite: 3].
+
+- **NLP & Data Ingestion: spaCy & Requests**
+  - *Requests:* HTTP library used to fetch raw mosque metadata, coordinates, and reviews from the Google Places API.
+  - *spaCy:* NLP framework used for keyword extraction and context/sentiment analysis to parse review text. This will be used to distinguish "has a women's section" from "no women's section" and help set database facility flags automatically.
+
+- **Frontend UI: React.js, Tailwind CSS & Google Maps SDK**
+  - *React.js:* Allows for real-time UI updates when applying filters.
+  - *Tailwind CSS:* Used to build a responsive and clean UI design.
+  - *Google Maps SDK:* Dynamically renders map markers based on user location.
+
+- **Version Control & Tooling:** Git, GitHub, VS Code
+
