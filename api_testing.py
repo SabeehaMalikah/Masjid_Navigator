@@ -1,10 +1,16 @@
 import requests
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+api_key = os.getenv("GOOGLE_PLACES_API_KEY")
 
 def find_mosques():
     url = "https://places.googleapis.com/v1/places:searchText"
     headers = {
         "Content-Type" : "application/json",
-        "X-Goog-Api-Key" : "AIzaSyBMSDTuVkHUjxCLrBQFM5KsswqnJXAzLbQ",
+        "X-Goog-Api-Key" : api_key,
         "X-Goog-FieldMask" : "places.displayName,places.formattedAddress,places.location,places.reviews"
     }
 
@@ -69,6 +75,7 @@ def pretty_print(mosques_dict):
 
 
 def main():
+    print("Welcome to Masjid Navigator!")
     result = find_mosques()
     pretty_print(result[:2])
 main()
