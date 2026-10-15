@@ -39,25 +39,25 @@
 ### Coding
 - [x] Set up PostgreSQL database.
 - [x] Write SQL scripts.
-- [ ] Migrate hardcoded JSON dataset into PostgreSQL tables.
+- [x] Migrate hardcoded JSON dataset into PostgreSQL tables.
 
 ### Learning
 - [x] SQL basics
 
 ## Week 6
-- [ ] Set up `spaCy` or `NLTK` in Python.
-- [ ] Write a script that scans fetched user reviews for keywords ("women's section, "prayer area for women").
-- [ ] Assign tags based on keywords.
+- [x] Set up `spaCy` or `NLTK` in Python.
+- [x] Write a script that scans fetched user reviews for keywords ("women's section, "prayer area for women").
+- [x] Assign tags based on keywords.
 
 ### Learning
-- [ ] Natural Language Processing concepts
-- [ ] string matching
+- [x] Natural Language Processing concepts
+- [x] string matching
 
 ## Week 7
 - [ ] Add sentiment checking to NLP script to distinguish between "no women's section" and "has women's section".
-- [ ] Automate pipeline: Process user review -> Extract tags -> Update mosque flags in database.
+- [x] Automate pipeline: Process user review -> Extract tags -> Update mosque flags in database.
 
-### Leanring
+### Learning
 - [ ] Sentiment analysis.
 
 ## Week 8
