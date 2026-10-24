@@ -9,6 +9,9 @@ Muslims are required to pray five times a day and are often outside of their hom
 
 **Features**: Each mosque will have a profile with information describing what facilities are available. Users will be able to interact with a map containing markers for nearby masjids. They can click on masjids for more detail or easily view their facilities at a glance.
 
+## Project Management
+Project milestones, completed tasks, and weekly timelines are tracked in [PROJECT_TRACKER.md](./PROJECT_TRACKER.md).
+
 ## Technical Stack
 - **Database: PostgreSQL**
   - Used to store structured relationships between mosques, facility attributes, and reviews.
