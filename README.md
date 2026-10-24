@@ -27,3 +27,60 @@ Muslims are required to pray five times a day and are often outside of their hom
 
 - **Version Control & Tooling:** Git, GitHub, VS Code
 
+## Installation and Execution Instructions
+
+### Prerequisites
+Ensure the following are installed:
+* Python 3.12.6 or higher
+```
+python --version
+```
+* Git
+```
+git --version
+```
+* PostgreSQL 14+ (Running locally on port 5432)
+* Google Places API Key (with Places (New) API enabled)
+
+### Clone the Repository
+```
+git clone https://github.com/SabeehaMalikah/Masjid_Navigator.git
+cd Masjid_Navigator
+```
+
+### Install Requirements
+1. Install packages
+```
+pip install -r requirements.txt
+```
+2. Download spaCy English language model
+```
+python -m spacy download en_core_web_sm
+```
+
+### Configure the Environment
+1. Copy the template file to create your local `.env`
+```
+cp .env.example .env
+```
+2. Open `.env` and fill in your credentials:
+```
+GOOGLE_PLACES_API_KEY=your_google_places_api_key_here
+DATABASE_URL=postgresql://masjid_navigator:your_password@localhost:5432/masjid_navigator_db
+```
+
+### Set up the database
+1. Create the local database in PostgreSQL
+```
+CREATE DATABASE masjid_navigator_db WITH ENCODING = 'UTF8';
+```
+
+2. Populate the database
+```
+python scripts/populate_mosque_table.py
+python scripts/populate_review_table.py
+python scripts/populate_facilities_table.py
+```
+
+
+
