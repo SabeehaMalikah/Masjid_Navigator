@@ -4,6 +4,8 @@ import psycopg2
 import spacy
 from dotenv import load_dotenv
 
+# Script to build and populate the facilities table in the database.
+
 load_dotenv()
 
 db_url = os.getenv("DATABASE_URL")
@@ -12,6 +14,21 @@ nlp = spacy.blank("en")
 nlp.add_pipe("sentencizer")
 
 def build_database(cursor):
+    '''
+    Creates the facilities table in the database if it does not already exist.
+    
+    The table includes columns for the facility ID, Google Places ID, whether it has a women's section,
+    and whether the information has been verified using NLP.
+    
+    It also establishes a foreign key relationship with the mosque table based on the Google Places ID.
+
+    parameters:
+        cursor (psycopg2.cursor): The database cursor used to execute SQL commands.
+
+    returns:
+        None
+    '''
+
     cursor.execute('''CREATE TABLE IF NOT EXISTS facilities (
         id BIGSERIAL primary key,
         google_places_id VARCHAR(50),
@@ -22,6 +39,20 @@ def build_database(cursor):
     ''')
 
 def check_womens_section(review, nlp):
+    '''
+    Checks if a review mentions the presence of a women's section using NLP.
+    
+    The function uses regular expressions to identify keywords related to women's sections
+    and negation patterns to determine if the mention is negated.
+
+    parameters:
+        review (str): The review text to be analyzed.
+        nlp (spacy.lang.en.English): The SpaCy NLP pipeline used for sentence segmentation.
+
+    returns:
+        bool: True if the review indicates the presence of a women's section, False otherwise.
+    '''
+
     review = review.lower()
     has_womens_section = False
     womens_patterns = r"\bwom[ae]n'?s?'?|\bsister'?s?'?|ladies|female"
@@ -37,6 +68,20 @@ def check_womens_section(review, nlp):
     return has_womens_section
 
 def populate_database(cursor, nlp):
+    '''
+    Populates the facilities table in the database with information about women's sections.
+    
+    The function retrieves reviews from the review table, analyzes them using NLP to determine
+    if they mention the presence of a women's section, and inserts the results into the facilities table.
+
+    parameters:
+        cursor (psycopg2.cursor): The database cursor used to execute SQL commands.
+        nlp (spacy.lang.en.English): The SpaCy NLP pipeline used for sentence segmentation.
+
+    returns:
+        None
+    '''
+
     query = ''' INSERT INTO facilities(google_places_id, has_womens_section, nlp_verified) 
     VALUES(%s, %s, %s);
     '''
@@ -64,18 +109,23 @@ def populate_database(cursor, nlp):
         True
         ))
 
-# main
-connection = psycopg2.connect(
-    db_url,
-    options="-c client_encoding=utf8"
-)
-connection.set_client_encoding('UTF8')
-cursor = connection.cursor()
+def main():
+    '''
+    Main function to build and populate the facilities table in the database.
+    '''
+    connection = psycopg2.connect(
+        db_url,
+        options="-c client_encoding=utf8"
+    )
+    connection.set_client_encoding('UTF8')
+    cursor = connection.cursor()
 
-build_database(cursor)
-populate_database(cursor, nlp)
+    build_database(cursor)
+    populate_database(cursor, nlp)
 
-connection.commit()
-cursor.close()
-connection.close()
+    connection.commit()
+    cursor.close()
+    connection.close()
+
+main()
 

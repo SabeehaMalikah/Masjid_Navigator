@@ -4,6 +4,9 @@ Task: Start by building a tiny Python program containing 5-10 mosques and their 
 '''
 from datetime import datetime
 
+# Prototype script for a simple Masjid Navigator program.
+# Contains hardcoded data for 10 mosques and allows filtering/searching based on various criteria.
+
 
 masjid1 = {
     "name" : "Al Istiqamah Community Center",
@@ -98,29 +101,85 @@ masjid10 = {
 masjids = [masjid1, masjid2, masjid3, masjid4, masjid5, masjid6, masjid7, masjid8, masjid9, masjid10]
 
 def has_womens_section(masjids, masjid_name):
+    '''
+    Checks if a specific masjid has a women's prayer section.
+
+    parameters:
+        masjids (list): A list of masjid dictionaries.
+        masjid_name (str): The name of the masjid to check.
+
+    returns:
+        bool or str: True if the masjid has a women's section, False if not, or "Masjid not found." if the masjid is not in the list.
+    '''
     for masjid in masjids:
         if masjid_name.lower() == masjid["name"].lower():
             return masjid["womens_section"]
     return "Masjid not found."
 
 def filter_womens_section(masjids):
+    '''
+    Filters the list of masjids to include only those with a women's prayer section.
+
+    parameters:
+        masjids (list): A list of masjid dictionaries.
+
+    returns:
+        list: A list of masjids that have a women's prayer section.
+    '''
     result = [masjid for masjid in masjids if masjid["womens_section"]]
     return result
 
 def filter_sunni(masjids):
+    '''
+    Filters the list of masjids to include only Sunni masjids.
+
+    parameters:
+        masjids (list): A list of masjid dictionaries.
+
+    returns:
+        list: A list of Sunni masjids.
+    '''
     result = [masjid for masjid in masjids if masjid["denomination"] == "Sunni"]
     return result
 
 def filter_shia(masjids):
+    '''
+    Filters the list of masjids to include only Shia masjids.
+
+    parameters:
+        masjids (list): A list of masjid dictionaries.
+
+    returns:
+        list: A list of Shia masjids.
+    '''
     result = [masjid for masjid in masjids if masjid["denomination"] == "Shia"]
     return result
 
 def filter_open(masjids):
+    '''
+    Filters the list of masjids to include only those that are currently open.
+
+    parameters:
+        masjids (list): A list of masjid dictionaries.
+
+    returns:
+        list: A list of currently open masjids.
+    '''
     current_time = datetime.now().strftime("%H:%M")
     result = [masjid for masjid in masjids if masjid["open"] < current_time and masjid["close"] > current_time]
     return result
 
 def filter_borough(masjids, target_borough):
+    '''
+    Filters the list of masjids to include only those located in the specified borough.
+
+    parameters:
+        masjids (list): A list of masjid dictionaries.
+        target_borough (str): The borough to filter by (e.g., "Brooklyn", "Queens").
+
+    returns:
+        list: A list of masjids located in the specified borough.
+    '''
     result = [masjid for masjid in masjids if target_borough in masjid["address"]]
     if target_borough == "Queens:":
         result = []
@@ -132,6 +191,15 @@ def filter_borough(masjids, target_borough):
     return result
 
 def print_directory(masjids_list=masjids):
+    '''
+    Prints the directory of masjids.
+
+    parameters:
+        masjids_list (list): A list of masjid dictionaries to be printed.
+
+    returns:
+        None
+    '''
     i = 1
     for masjid in masjids_list:
         print(
@@ -143,6 +211,16 @@ def print_directory(masjids_list=masjids):
         i += 1
 
 def main():
+    '''
+    The main function that drives the Masjid Navigator program.
+
+    It prints the initial directory of masjids and prompts the user for filtering options.
+    Based on the user's input, it applies the selected filters and displays the filtered results.
+
+    returns:
+        None
+    '''
+    
     print(
         "Welcome to Masjid Navigator!\n" \
         "Please see the list of masaajid below:\n"
