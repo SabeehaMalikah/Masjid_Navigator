@@ -27,6 +27,30 @@ Muslims are required to pray five times a day and are often outside of their hom
 
 - **Version Control & Tooling:** Git, GitHub, VS Code
 
+## Repository Structure
+```
+Masjid_Navigator/
+├── .env.example                    # Template for required environment variables
+├── .gitignore                      # Blocks secret API keys, caches, and raw output data
+├── LICENSE                         # MIT Open-Source License
+├── README.md                       # Project documentation & setup instructions
+├── requirements.txt                # Tracked Python third-party dependencies
+│
+├── data/                           # Local datasets & search parameters
+│   └── nyc_neighborhoods.txt
+│
+├── scripts/                         # Executable Python scripts to populate database
+│   ├── api_testing.py               # Initial API call testing
+│   ├── populate_mosque_table.py     # Populates mosque table in database
+│   ├── populate_review_table.py     # Extracts reviews from mosque table and populates review table
+│   ├── populate_facilities_table.py # Extracts reviews from review table and uses pattern matching and spaCy NLP 
+|   |                                # for review parsing & facility tagging
+│   └── prototype.py                 # Initial CLI proof-of-concept
+│
+└── public/                          # Frontend files
+    └── index.html
+```
+
 ## Installation and Execution Instructions
 
 ### Prerequisites
