@@ -53,6 +53,20 @@ def check_womens_section(review, nlp):
         bool: True if the review indicates the presence of a women's section, False otherwise.
     '''
 
+    '''
+    Code Review
+    
+    Current issues:
+    - The function may produce false positives if negation patterns are not correctly identified.
+    - It does not account for complex sentence structures where the mention of a women's section is implied rather than explicitly stated.
+    - The regular expressions may not cover all possible variations of referring to women's sections.
+
+    Resolved Issues:
+    - The function now uses sentence segmentation to better handle complex sentence structures.
+    - Negation patterns are checked within each sentence to reduce false positives.
+    - The regular expressions have been refined to cover more variations of referring to women's sections and include negation patterns.
+    '''
+
     review = review.lower()
     has_womens_section = False
     womens_patterns = r"\bwom[ae]n'?s?'?|\bsister'?s?'?|ladies|female"
