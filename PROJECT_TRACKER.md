@@ -28,7 +28,7 @@
 ## Week 4
 - [x] Set up a Google Cloud Console account and generate a Google Places API key.
 - [x] Write a Python script that uses the requests library to fetch NYC mosque data (name, address, hours, reviews).
-- [ ] Store raw data into PostgreSQL.
+- [x] Store raw data into PostgreSQL.
 
 ### Learning
 - [x] API keys
@@ -54,11 +54,11 @@
 - [x] string matching
 
 ## Week 7
-- [ ] Add sentiment checking to NLP script to distinguish between "no women's section" and "has women's section".
+- [x] Add sentiment checking to NLP script to distinguish between "no women's section" and "has women's section".
 - [x] Automate pipeline: Process user review -> Extract tags -> Update mosque flags in database.
 
 ### Learning
-- [ ] Sentiment analysis.
+- [x] Sentiment analysis.
 
 ## Week 8
 - [ ] Initialize FastAPI backend project.
