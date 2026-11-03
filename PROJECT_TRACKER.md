@@ -61,12 +61,9 @@
 - [x] Sentiment analysis.
 
 ## Week 8
-- [ ] Initialize FastAPI backend project.
-- [ ] Connect FastAPI to PostgreSQL.
-- [ ] Create `GET /mosques` route to fetch all mosques from the database.
-
-### Learning
-- [ ]
+- [x] Initialize FastAPI backend project.
+- [x] Connect FastAPI to PostgreSQL.
+- [x] Create `GET /mosques` route to fetch all mosques from the database.
 
 ## Week 9
 - [ ] Implement API filtering logic.
