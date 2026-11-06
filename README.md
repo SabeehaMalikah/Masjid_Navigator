@@ -6,11 +6,11 @@ Advisor: Professor Shalva Landy \
 ## Abstract
 Muslims are required to pray five times a day and are often outside of their homes during prayer times due to school, work, or other activities. In these situations, they look for mosques (also known as masjid in Arabic) in their surrounding areas. Determining whether a masjid has designated women's prayer sections can be difficult, and I have often found myself searching through Google Maps reviews or other sources to identify if such facilities are available.
 
-**Goal**: This web application presents a solution to this issue by providing a platform where users can easily view available facilities at nearby mosques.
+- **Goal**: This web application presents a solution to this issue by providing a platform where users can easily view available facilities at nearby mosques.
 
-**Features**: Each mosque will have a profile with information describing what facilities are available. Users will be able to interact with a map containing markers for nearby masjids. They can click on masjids for more detail or easily view their facilities at a glance.
+- **Features**: Each mosque will have a profile with information describing what facilities are available. Users will be able to interact with a map containing markers for nearby masjids. They can click on masjids for more detail or easily view their facilities at a glance.
 
-**Target Audience**: This app is designed for Muslim men and women seeking verified mosque and prayer space information on the go.
+- **Target Audience**: This app is designed for Muslim men and women seeking verified mosque and prayer space information on the go.
 
 ## Project Management
 Project milestones, completed tasks, and weekly timelines are tracked in [PROJECT_TRACKER.md](./PROJECT_TRACKER.md).
@@ -36,6 +36,15 @@ Project milestones, completed tasks, and weekly timelines are tracked in [PROJEC
 ## Privacy and Security
 - **Data**: All data that is stored in the Postgres database is extracted from public Google Places API metadata. No personal user information is stored or tracked.
 - **Secrets Protection**: API keys and database credentials are stored securely in environment variables. Secret files are strictly excluded from version control via `.gitignore`, and a template is provided in [`.env.example`](./.env.example).
+
+## Accessiblity
+This project is designed with accessibility in mind. Some accessibility features that will be included are listed below. 
+
+- High visual contrast between text and background colors.
+- Visual icons will be paired with visible text labels.
+- Semantic HTML elements, `aria-labels`, and proper `alt` text will be used to ensure screen reader accessibility.
+  
+As this project is still a work in progress, more features will be added over time.
 
 ## Repository Structure
 ```
