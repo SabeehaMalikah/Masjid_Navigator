@@ -136,10 +136,11 @@ python scripts/populate_review_table.py
 python scripts/populate_facilities_table.py
 ```
 
-## Limitations and Biases
+## Limitations, Biases, and Social Impact
 - **Data Limitations**: All mosques within the database are restricted to those located in NYC and publicly available through the Google Places API. Plans to expand the database are in progress.
 - **Algorithmic Bias:** To prevent misleading information, spaCy sentence parsing and Regex are used for sentiment analysis before populating the database.
 - **Data Freshness:** Google Places review data is stored with timestamps (`review_date`) to ensure transparency regarding when information was last verified.
+- **Social Impact:** This app is designed to provide an essential tool for the Muslim community. Accurate, reliable mosque information will help users quickly find nearby mosques when they are on the go.
 
 ## License and Data Attribution
 - **License**: This project is licensed under the MIT License.
