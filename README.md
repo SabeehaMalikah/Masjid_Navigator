@@ -1,6 +1,7 @@
 # Masjid-Navigator
 Sabeeha Malikah \
-Advisor: Professor Shalva Landy
+Advisor: Professor Shalva Landy \
+*CISC 4900 Senior Project, Fall 2026*
 
 ## Abstract
 Muslims are required to pray five times a day and are often outside of their homes during prayer times due to school, work, or other activities. In these situations, they look for mosques (also known as masjid in Arabic) in their surrounding areas. Determining whether a masjid has designated women's prayer sections can be difficult, and I have often found myself searching through Google Maps reviews or other sources to identify if such facilities are available.
@@ -8,6 +9,8 @@ Muslims are required to pray five times a day and are often outside of their hom
 **Goal**: This web application presents a solution to this issue by providing a platform where users can easily view available facilities at nearby mosques.
 
 **Features**: Each mosque will have a profile with information describing what facilities are available. Users will be able to interact with a map containing markers for nearby masjids. They can click on masjids for more detail or easily view their facilities at a glance.
+
+**Target Audience**: This app is designed for Muslim men and women seeking verified mosque and prayer space information on the go.
 
 ## Project Management
 Project milestones, completed tasks, and weekly timelines are tracked in [PROJECT_TRACKER.md](./PROJECT_TRACKER.md).
@@ -17,7 +20,7 @@ Project milestones, completed tasks, and weekly timelines are tracked in [PROJEC
   - Used to store structured relationships between mosques, facility attributes, and reviews.
   
 - **Backend API: Python (FastAPI)**
-  - Provides high execution speed and automatically generates interactive Swagger UI documentation for testing REST endpoints[cite: 3].
+  - Provides high execution speed and automatically generates interactive Swagger UI documentation for testing REST endpoints.
 
 - **NLP & Data Ingestion: spaCy & Requests**
   - *Requests:* HTTP library used to fetch raw mosque metadata, coordinates, and reviews from the Google Places API.
@@ -30,6 +33,10 @@ Project milestones, completed tasks, and weekly timelines are tracked in [PROJEC
 
 - **Version Control & Tooling:** Git, GitHub, VS Code
 
+## Privacy and Security
+- **Data**: All data that is stored in the Postgres database is extracted from public Google Places API metadata. No personal user information is stored or tracked.
+- **Secrets Protection**: API keys and database credentials are stored securely in environment variables. Secret files are strictly excluded from version control via `.gitignore`, and a template is provided in [`.env.example`](./.env.example).
+
 ## Repository Structure
 ```
 Masjid_Navigator/
@@ -38,6 +45,17 @@ Masjid_Navigator/
 ├── LICENSE                         # MIT Open-Source License
 ├── README.md                       # Project documentation & setup instructions
 ├── requirements.txt                # Tracked Python third-party dependencies
+├── app/                            # Backend files
+│   └── routers/                    # Scripts for HTTP requests separated by table
+│      └── facilities.py            
+│      └── mosque.py
+│      └── review.py
+│   └── __init__.py
+│   └── database.py                 # Database connection
+│   └── main.py
+│   └── models.py                   # Postgres database tables
+│   └── schemas.py                  
+│   └── utils.py
 │
 ├── data/                           # Local datasets & search parameters
 │   └── nyc_neighborhoods.txt
@@ -109,5 +127,11 @@ python scripts/populate_review_table.py
 python scripts/populate_facilities_table.py
 ```
 
+## Limitations and Biases
+- **Data Limitations**: All mosques within the database are restricted to those located in NYC and publicly available through the Google Places API. Plans to expand the database are in progress.
+- **Algorithmic Bias:** To prevent misleading information, spaCy sentence parsing and Regex are used for sentiment analysis before populating the database.
+- **Data Freshness:** Google Places review data is stored with timestamps (`review_date`) to ensure transparency regarding when information was last verified.
 
-
+## License and Data Attribution
+- **License**: This project is licensed under the MIT License.
+- **Data Attribution**: Mosque location metadata and review data are sourced from the Google Places API in accordance with Google Cloud Terms of Service.
