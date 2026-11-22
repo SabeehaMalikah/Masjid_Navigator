@@ -148,12 +148,14 @@ This project uses an automated `pytest` suite organized under `tests/` alongside
 1. Install dependencies (including `pytest` and `httpx`):
    ```bash
    pip install -r requirements.txt
+   ```
 
 2. Run the full test suite from the repository root:
-  ```bash
-  pytest -v
+   ```bash
+   pytest -v
+   ```
 
-** Disclaimer: All testing scripts were written with the assistance of Gemini.
+**Disclaimer:** All testing scripts were written with the assistance of Gemini.
 
 ## Limitations, Biases, and Social Impact
 - **Data Limitations**: All mosques within the database are restricted to those located in NYC and publicly available through the Google Places API. Plans to expand the database are in progress.
