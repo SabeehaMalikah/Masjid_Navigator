@@ -141,5 +141,6 @@ def main():
     cursor.close()
     connection.close()
 
-main()
+if __name__ == "__main__":
+    main()
 

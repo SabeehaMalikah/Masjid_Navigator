@@ -5,3 +5,5 @@ __pycache__/
 .cache_ggshield
 venv/
 .venv/
+.pytest_cache/
+test_fallback.db

@@ -6,7 +6,7 @@ import os
 
 load_dotenv()
 
-SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL")
+SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL") or "sqlite:///./test_fallback.db"
 engine = create_engine(SQLALCHEMY_DATABASE_URL) # establishes connection
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
