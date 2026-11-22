@@ -17,12 +17,14 @@
             Masjid Navigator
             <img id="logo" src="images/logo.png" alt="Masjid Navigator logo">
         </div>
-        <input id="search-bar" type="text", placeholder="Enter your address to find masjids near you...">
+        <input class="search-container" id="search-bar" type="text" placeholder="Enter your address to find masjids near you..." aria-label="Enter your address to find masjids near you">
         <div>
-            <img id="profile-icon" src="images/empty_box.png" alt="Your profile icon"
+            <button class="icon-btn" aria-label="User profile settings">
+                <img id="profile-icon" src="images/empty_box.png" alt="">
+            </button>        
         </div>
     </header>
-    <nav class="navigation-bar">
+    <nav class="navigation-bar" aria-label="Primary view and filter navigation">
         <div>
             <a href="dashboard.html">
                 <button>
@@ -43,14 +45,14 @@
         </div>
     </nav>
     <main>
-        <section class="map-section">
+        <section class="map-section" aria-labelledby="map-heading">
             <h2>
                 Interactive Map
             </h2>
             <gmp-map center="40.631576994828436, -73.95145804986606" zoom="15" map-id="DEMO_MAP_ID">
             </gmp-map>
         </section>
-        <section class="list-section">
+        <section class="list-section" aria-labelledby="list-heading">
             <h2>
                 List View
             </h2>
@@ -63,13 +65,13 @@
                     <p>
                         Address
                     </p>
-                    <button id="mosque-feature">
+                    <button class="mosque-feature">
                         Women
                     </button>
-                    <button id="mosque-feature">
+                    <button class="mosque-feature">
                         Rating
                     </button>
-                    <button id="mosque-feature">
+                    <button class="mosque-feature">
                         Distance
                     </button>
                 </div>
@@ -84,13 +86,13 @@
                     <p>
                         Address
                     </p>
-                    <button id="mosque-feature">
+                    <button class="mosque-feature">
                         Women
                     </button>
-                    <button id="mosque-feature">
+                    <button class="mosque-feature">
                         Rating
                     </button>
-                    <button id="mosque-feature">
+                    <button class="mosque-feature">
                         Distance
                     </button>
                 </div>
@@ -105,13 +107,13 @@
                     <p>
                         Address
                     </p>
-                    <button id="mosque-feature">
+                    <button class="mosque-feature">
                         Women
                     </button>
-                    <button id="mosque-feature">
+                    <button class="mosque-feature">
                         Rating
                     </button>
-                    <button id="mosque-feature">
+                    <button class="mosque-feature">
                         Distance
                     </button>
                 </div>
@@ -126,13 +128,13 @@
                     <p>
                         Address
                     </p>
-                    <button id="mosque-feature">
+                    <button class="mosque-feature">
                         Women
                     </button>
-                    <button id="mosque-feature">
+                    <button class="mosque-feature">
                         Rating
                     </button>
-                    <button id="mosque-feature">
+                    <button class="mosque-feature">
                         Distance
                     </button>
                 </div>
@@ -147,13 +149,13 @@
                     <p>
                         Address
                     </p>
-                    <button id="mosque-feature">
+                    <button class="mosque-feature">
                         Women
                     </button>
-                    <button id="mosque-feature">
+                    <button class="mosque-feature">
                         Rating
                     </button>
-                    <button id="mosque-feature">
+                    <button class="mosque-feature">
                         Distance
                     </button>
                 </div>

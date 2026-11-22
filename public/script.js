@@ -1,25 +1,23 @@
 async function init() {
-    // Request the needed libraries.
     const [{ AdvancedMarkerElement }] = await Promise.all([
         google.maps.importLibrary('marker'),
         google.maps.importLibrary('maps'),
     ]);
-    // Get the gmp-map element.
+
     const mapElement = document.querySelector('gmp-map');
+    if (!mapElement) return;
 
-    // Get the inner map.
     const innerMap = mapElement.innerMap;
-
-    // Set map options.
     innerMap.setOptions({
         mapTypeControl: false,
     });
 
-    // Add a marker positioned at the map center (Uluru).
+    // Marker positioned at Brooklyn center coordinates from index.html
     new AdvancedMarkerElement({
         map: innerMap,
         position: mapElement.center,
-        title: 'Uluru/Ayers Rock',
+        title: 'Nearby Masjid (Brooklyn, NY)',
     });
 }
+
 void init();
