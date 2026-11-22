@@ -136,6 +136,25 @@ python scripts/populate_review_table.py
 python scripts/populate_facilities_table.py
 ```
 
+## Testing & Quality Assurance
+
+### Testing Strategy
+This project uses an automated `pytest` suite organized under `tests/` alongside the application source code:
+- **Unit Testing (`tests/test_nlp_pipeline.py`):** Verifies `check_womens_section()` in `scripts/populate_facilities_table.py` against positive facility keywords, same-sentence negations (`no`, `not`, `doesn't`), multi-sentence boundary cases, neutral reviews, and empty strings.
+- **Integration Testing (`tests/test_api_endpoints.py`):** Uses FastAPI's `TestClient` with an isolated in-memory SQLite database override to verify HTTP status codes, query filtering (`?search=`), pagination (`limit` and `skip`), schema serialization, and `404 Not Found` error responses across `/`, `/mosques/`, and `/review/`.
+- **Continuous Integration (`.github/workflows/tests.yml`):** GitHub Actions automatically runs `pytest -v` on every push and pull request to `main` to catch regressions before merging.
+
+### Running the Test Suite
+1. Install dependencies (including `pytest` and `httpx`):
+   ```bash
+   pip install -r requirements.txt
+
+2. Run the full test suite from the repository root:
+  ```bash
+  pytest -v
+
+** Disclaimer: All testing scripts were written with the assistance of Gemini.
+
 ## Limitations, Biases, and Social Impact
 - **Data Limitations**: All mosques within the database are restricted to those located in NYC and publicly available through the Google Places API. Plans to expand the database are in progress.
 - **Algorithmic Bias:** To prevent misleading information, spaCy sentence parsing and Regex are used for sentiment analysis before populating the database.
