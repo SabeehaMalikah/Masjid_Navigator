@@ -1,1 +1,165 @@
-<h1>Masjid Navigator - In Development</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Locate masaajid near you!">
+    <title>Masjid Navigator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="./script.js" ></script>
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyA98pmcA3jorwecp-4xegBTorjEMvsncFM", v: "weekly"});
+    </script>
+</head>
+<body>
+    <header class="top-bar">
+        <div>
+            Masjid Navigator
+            <img id="logo" src="images/logo.png" alt="Masjid Navigator logo">
+        </div>
+        <input id="search-bar" type="text", placeholder="Enter your address to find masjids near you...">
+        <div>
+            <img id="profile-icon" src="images/empty_box.png" alt="Your profile icon"
+        </div>
+    </header>
+    <nav class="navigation-bar">
+        <div>
+            <a href="dashboard.html">
+                <button>
+                    Dashboard
+                </button>
+            </a>
+
+            <a href="index.html">
+                <button>
+                    Map View
+                </button>
+            </a>
+        </div>
+        <div>
+            <button>
+                Filter
+            </button>
+        </div>
+    </nav>
+    <main>
+        <section class="map-section">
+            <h2>
+                Interactive Map
+            </h2>
+            <gmp-map center="40.631576994828436, -73.95145804986606" zoom="15" map-id="DEMO_MAP_ID">
+            </gmp-map>
+        </section>
+        <section class="list-section">
+            <h2>
+                List View
+            </h2>
+            <div class="mosque-card">
+                <img src="images/empty_box.png" alt="placeholder for mosque image">
+                <div class="card-details">
+                    <h3>
+                        Mosque Name
+                    </h3>
+                    <p>
+                        Address
+                    </p>
+                    <button id="mosque-feature">
+                        Women
+                    </button>
+                    <button id="mosque-feature">
+                        Rating
+                    </button>
+                    <button id="mosque-feature">
+                        Distance
+                    </button>
+                </div>
+            </div>
+
+            <div class="mosque-card">
+                <img src="images/empty_box.png" alt="placeholder for mosque image">
+                <div class="card-details">
+                    <h3>
+                        Mosque Name
+                    </h3>
+                    <p>
+                        Address
+                    </p>
+                    <button id="mosque-feature">
+                        Women
+                    </button>
+                    <button id="mosque-feature">
+                        Rating
+                    </button>
+                    <button id="mosque-feature">
+                        Distance
+                    </button>
+                </div>
+            </div>
+
+            <div class="mosque-card">
+                <img src="images/empty_box.png" alt="placeholder for mosque image">
+                <div class="card-details">
+                    <h3>
+                        Mosque Name
+                    </h3>
+                    <p>
+                        Address
+                    </p>
+                    <button id="mosque-feature">
+                        Women
+                    </button>
+                    <button id="mosque-feature">
+                        Rating
+                    </button>
+                    <button id="mosque-feature">
+                        Distance
+                    </button>
+                </div>
+            </div>
+
+            <div class="mosque-card">
+                <img src="images/empty_box.png" alt="placeholder for mosque image">
+                <div class="card-details">
+                    <h3>
+                        Mosque Name
+                    </h3>
+                    <p>
+                        Address
+                    </p>
+                    <button id="mosque-feature">
+                        Women
+                    </button>
+                    <button id="mosque-feature">
+                        Rating
+                    </button>
+                    <button id="mosque-feature">
+                        Distance
+                    </button>
+                </div>
+            </div>
+
+            <div class="mosque-card">
+                <img src="images/empty_box.png" alt="placeholder for mosque image">
+                <div class="card-details">
+                    <h3>
+                        Mosque Name
+                    </h3>
+                    <p>
+                        Address
+                    </p>
+                    <button id="mosque-feature">
+                        Women
+                    </button>
+                    <button id="mosque-feature">
+                        Rating
+                    </button>
+                    <button id="mosque-feature">
+                        Distance
+                    </button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>
