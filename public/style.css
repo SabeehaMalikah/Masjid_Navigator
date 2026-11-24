@@ -1,6 +1,7 @@
 body{
     background-color: #BDB3A3;
     margin: 0;
+    font-family: "Inria Serif", serif;
 }
 
 header{
@@ -80,12 +81,22 @@ footer{
     align-items: center;
 }
 
+.section-header {
+    display: flex;
+}
+
 .list-section{
     background-image: linear-gradient(rgba(150, 143, 131, 0.85)), url("./images/geometric-tiles.jpg");
-    background-size: cover;
+    background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
     margin: 20px;
+    display: grid;
+}
+
+.list-section.dashboard-list{
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .map-section{
@@ -104,6 +115,13 @@ footer{
     display: flex;
     align-items: center;
     gap: 15px;
+}
+
+.mosque-card img{
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
 .mosque-feature{
@@ -144,5 +162,9 @@ input:focus-visible {
 
     gmp-map {
         height: 320px;
+    }
+
+    .list-section.dashboard-list {
+        grid-template-columns: 1fr; width: auto;
     }
 }
