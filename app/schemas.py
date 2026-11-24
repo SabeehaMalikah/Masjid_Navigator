@@ -9,6 +9,8 @@ class Mosque(BaseModel):
     google_places_id: str
     address: str
     rating: Optional[float] = None
+    latitude: Optional[float] = None
+    longitude: Optional[float] = None
 
     class Config:
         orm_mode = True
@@ -18,6 +20,12 @@ class Review(BaseModel):
     rating: Optional[float] = None
     review_text: Optional[str] = None
     review_date: Optional[datetime] = None
+
+    class Config:
+        orm_mode = True
+
+class Facilities(BaseModel):
+    has_womens_section: Optional[str] = None
 
     class Config:
         orm_mode = True
